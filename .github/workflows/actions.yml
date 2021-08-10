@@ -18,7 +18,8 @@ jobs:
           ls -a
       - name: Simple Javascript Action
         uses: actions/hello-world-javascript-action@v1.1
+        id: greet
         with:
           who-to-greet: 'Mona the Octocat'
       - name: Log Greeting Time
-        run: echo ${{steps.outputs.time}}
+        run: echo ${{steps.greet.outputs.time}}
