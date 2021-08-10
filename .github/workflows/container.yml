@@ -4,7 +4,7 @@ on:
 jobs:
   node-docker:
     runs-on: ubuntu-latest
-    container: node/14-alpine3.14
+    container: node:14-alpine3.14
     steps:
       - name: Log Node Version
         run: |
